@@ -73,7 +73,7 @@ fn probe(code: &str) -> bool {
     let mut child = Command::new(rustc)
         .arg("--out-dir")
         .arg(out_dir)
-        .arg("--emit=obj")
+        .arg("--emit=llvm")
         .arg("-")
         .stdin(Stdio::piped())
         .spawn()
